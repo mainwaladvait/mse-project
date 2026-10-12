@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ocean Life and Marine Conservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Ocean Life</h1>
+        <p>Protecting Our Oceans, Protecting Our Future</p>
+
+        <nav>
+            <div class="nav-left">
+                <a href="#home">Home</a>
+            </div>
+
+            <div class="nav-middle">
+                <a href="#ecosystems">Ecosystems</a>
+                <a href="#animals">Marine Animals</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="#action">Take Action</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h2>Discover the Wonderful World of Oceans</h2>
+        <p>
+            Oceans are home to millions of living organisms.
+            We must protect marine life from pollution, climate change
+            and other human activities.
+        </p>
+    </section>
+
+    <!-- Ecosystems Section -->
+    <section id="ecosystems">
+        <h2>Ocean Ecosystems</h2>
+
+        <div class="container">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80" alt="Ocean waves">
+                <h3>Open Ocean</h3>
+                <p>The open ocean is home to whales, dolphins, fish and many other marine animals.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=600&q=80" alt="Coral reef underwater">
+                <h3>Coral Reefs</h3>
+                <p>Coral reefs provide food and shelter for a large number of marine species.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=600&q=80" alt="Mangrove trees near water">
+                <h3>Mangrove Forests</h3>
+                <p>Mangroves protect coastlines and provide shelter for young fish and other animals.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Marine Animals Section -->
+    <section id="animals">
+        <h2>Meet Our Marine Animals</h2>
+
+        <button onclick="showAnimals('all')">Show All</button>
+        <button onclick="showAnimals('endangered')">Endangered Animals</button>
+        <button onclick="showAnimals('other')">Other Animals</button>
+
+        <div class="container">
+
+            <div class="card animal" data-type="endangered">
+                <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=600&q=80" alt="Sea turtle swimming underwater">
+                <h3>Sea Turtle</h3>
+                <p>Sea turtles help maintain healthy marine ecosystems. They face threats from plastic pollution, fishing nets and habitat loss.</p>
+            </div>
+
+            <div class="card animal" data-type="endangered">
+                <img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=600&q=80" alt="Shark swimming in the ocean">
+                <h3>Sharks</h3>
+                <p>Sharks play an important role in ocean food chains. Many species are threatened by overfishing and the loss of their habitats.</p>
+            </div>
+
+            <div class="card animal" data-type="other">
+                <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=600&q=80" alt="Blue whale in the ocean">
+                <h3>Blue Whale</h3>
+                <p>The blue whale is the largest animal on Earth. It feeds mainly on tiny shrimp-like animals called krill.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Ocean Threats Section -->
+    <section id="threats">
+        <h2>Threats to Our Oceans</h2>
+
+        <ul>
+            <li>Plastic pollution and waste</li>
+            <li>Climate change and rising ocean temperatures</li>
+            <li>Overfishing</li>
+            <li>Damage to coral reefs and marine habitats</li>
+        </ul>
+    </section>
+
+    <!-- Take Action Section -->
+    <section id="action">
+        <h2>How Can You Help?</h2>
+
+        <p>Small actions can make a big difference!</p>
+
+        <div class="checklist">
+            <label><input type="checkbox" onclick="updateProgress()"> Avoid single-use plastics</label>
+            <label><input type="checkbox" onclick="updateProgress()"> Keep beaches clean</label>
+            <label><input type="checkbox" onclick="updateProgress()"> Save water</label>
+            <label><input type="checkbox" onclick="updateProgress()"> Spread awareness about marine conservation</label>
+        </div>
+
+        <p id="progress">You have completed 0 out of 4 actions.</p>
+
+        <h3>Make an Ocean Pledge</h3>
+
+        <form onsubmit="makePledge(event)">
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="text" id="pledge" placeholder="How will you help the ocean?">
+            <button type="submit">Submit Pledge</button>
+        </form>
+
+        <p id="message"></p>
+        <p>Total pledges made: <span id="count">0</span></p>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+        <h2>Quick Ocean Quiz</h2>
+
+        <p>Which ecosystem helps protect coastlines and provides shelter for young fish?</p>
+
+        <button onclick="checkAnswer('wrong')">Deserts</button>
+        <button onclick="checkAnswer('correct')">Mangrove Forests</button>
+        <button onclick="checkAnswer('wrong')">Mountains</button>
+
+        <p id="answer"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Let's work together to protect marine life!</p>
+        <p>Learn more: <a href="https://www.iucnredlist.org/" target="_blank">IUCN Red List</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
